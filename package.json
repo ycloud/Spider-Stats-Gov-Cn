@@ -1,0 +1,24 @@
+{
+  "name": "Spider-Stats-Gov-Cn",
+  "version": "0.0.1",
+  "description": "nodejs抓取2016年统计用区划代码和城乡划分代",
+  "repository": "https://github.com/ycloud/Spider-Stats-Gov-Cn.git",
+  "author": "ycloud <abc123@foxmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "babel-node index.js"
+  },
+  "dependencies": {
+    "iconv-lite": "^0.4.19",
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "request": "^2.81.0",
+    "request-promise": "^4.2.1",
+    "sequelize": "^4.8.4",
+    "sqlite3": "^3.1.11"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0"
+  }
+}
