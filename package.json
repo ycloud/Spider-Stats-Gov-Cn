@@ -6,12 +6,14 @@
   "author": "ycloud <abc123@foxmail.com>",
   "private": true,
   "scripts": {
-    "dev": "babel-node index.js"
+    "web": "babel-node index.js",
+    "cli": "babel-node cli.js"
   },
   "dependencies": {
     "iconv-lite": "^0.4.19",
     "koa": "^2.3.0",
     "koa-router": "^7.2.1",
+    "open": "^0.0.5",
     "request": "^2.81.0",
     "request-promise": "^4.2.1",
     "sequelize": "^4.8.4",

@@ -9,6 +9,9 @@
 # install dependencies
 npm install
 
-# serve running at localhost:3000
-npm run dev
+# running web at localhost:3000
+npm run web
+
+# running command
+npm run cli
 ```
