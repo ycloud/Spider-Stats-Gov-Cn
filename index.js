@@ -26,11 +26,10 @@ router.get('/provinces', async ctx => {
 
 router.get('/citys', async ctx => {
   try {
-    const { province, citys } = await getCitys()
-    if (province) {
+    const citys = await getCitys()
+    if (citys) {
       ctx.body = `
       ${autoReload}
-      ${province.name}下城市信息采集完毕<br />
       ${JSON.stringify(citys)}`
     } else {
       ctx.body = `<script>setTimeout(function () {
@@ -46,11 +45,10 @@ router.get('/citys', async ctx => {
 
 router.get('/countys', async ctx => {
   try {
-    const { city, countys } = await getCountys()
-    if (city) {
+    const countys = await getCountys()
+    if (countys) {
       ctx.body = `
       ${autoReload}
-      ${city.name}下区县信息采集完毕<br />
       ${JSON.stringify(countys)}`
     } else {
       ctx.body = `<script>setTimeout(function () {
@@ -66,11 +64,10 @@ router.get('/countys', async ctx => {
 
 router.get('/townships', async ctx => {
   try {
-    const { county, townships } = await getTownships()
-    if (county) {
+    const townships = await getTownships()
+    if (townships) {
       ctx.body = `
       ${autoReload}
-      ${county.name}下乡镇信息采集完毕<br />
       ${JSON.stringify(townships)}`
     } else {
       ctx.body = `<script>setTimeout(function () {
@@ -86,11 +83,10 @@ router.get('/townships', async ctx => {
 
 router.get('/villages', async ctx => {
   try {
-    const { township, villages } = await getVillages()
-    if (township) {
+    const villages = await getVillages()
+    if (villages) {
       ctx.body = `
       ${autoReload}
-      ${township.name}下乡村信息采集完毕<br />
       ${JSON.stringify(villages)}`
     } else {
       ctx.body = `所有乡村信息采集完毕`
@@ -106,4 +102,4 @@ app.use(router.routes())
 
 app.listen(3000)
 
-open('http://127.0.0.1:3000')
+open('http://127.0.0.1:3000/provinces')
